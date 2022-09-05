@@ -38,19 +38,7 @@
   },
   "description": "PCRE2 (Perl Compatible Regular Expressions 2) compiled to WebAssembly",
   "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.8.3",
-    "@babel/node": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/register": "^7.8.3",
-    "babel-eslint": "^8.2.6",
-    "babel-plugin-istanbul": "^4.1.6",
-    "chokidar-cli": "^1.2.3",
-    "cross-env": "^5.2.1",
-    "eslint": "^5.16.0",
-    "mocha": "^6.2.2",
-    "nyc": "^12.0.2",
-    "rimraf": "^2.7.1"
+   
   },
   "files": [
     "dist",
@@ -71,16 +59,7 @@
     "url": "git+https://github.com/stephen-riley/pcre2-wasm.git"
   },
   "scripts": {
-    "build": "rimraf dist && make && babel -s inline -D src -d dist",
-    "clean": "rimraf dist coverage .nyc_output deps/build",
-    "lightclean": "rimraf dist",
-    "lint": "eslint src test",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test",
-    "preversion": "npm test && npm run lint",
-    "test": "make && cross-env NODE_ENV=test mocha --exit --require '@babel/register' --throw-deprecation test/",
-    "test:coverage": "make && cross-env NODE_ENV=test nyc mocha",
-    "test:watch": "chokidar src test mock fixtures Makefile --initial -c 'npm t'"
+   
   },
   "version": "1.2.4"
 }

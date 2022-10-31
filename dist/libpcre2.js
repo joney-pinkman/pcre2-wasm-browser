@@ -775,7 +775,7 @@ function isDataURI(filename) {
  return String.prototype.startsWith ? filename.startsWith(dataURIPrefix) : filename.indexOf(dataURIPrefix) === 0;
 }
 
-var wasmBinaryFile = process.env.PUBLIC_URL + "/libpcre2.wasm";
+var wasmBinaryFile = process.env.ASSET_PATH + "/libpcre2.wasm";
 
 if (!isDataURI(wasmBinaryFile)) {
  wasmBinaryFile = locateFile(wasmBinaryFile);
